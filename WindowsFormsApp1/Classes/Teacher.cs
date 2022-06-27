@@ -36,7 +36,7 @@ namespace Schedule_Editor
         public int NumberOfHours { get; set; }
 
         public string Group { get; set; }
-        //
+        
         public string ClassForm { get; set; }
 
         public Subject(string name, int numberOfHours, string group, string classForm)

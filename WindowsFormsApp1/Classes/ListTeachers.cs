@@ -150,23 +150,12 @@ namespace Schedule_Editor
         
         public bool IsAudienceEmpty(string number, int numberOfLecture)
         {
-            //foreach (var subGroup in Shedule)
-            //{
-            //    if (subGroup.ScheduleFieldsAudiencesSubGroup1[numberOfLecture] == number) return false;
-
-            //}
+            
             return true;
         }
         public bool IsLectorFree(string secName, int numberOfLecture)
         {
-            //foreach (var subGroup in Shedule)
-            //{
-            //    if (subGroup.ScheduleFieldsSubjectsSubGroup1[numberOfLecture].Contains(secName)) return false;
-            //}
-            //foreach (var subGroup in Shedule)
-            //{
-            //    if (subGroup.ScheduleFieldsSubjectsSubGroup2[numberOfLecture].Contains(secName)) return false;
-            //}
+            
             return true;
         }
 
@@ -188,17 +177,7 @@ namespace Schedule_Editor
         }
         public bool IsScheduleFilled()
         {
-            //foreach (var group in Shedule)
-            //{
-            //    for (int i = 0; i < group.ScheduleFieldsSubjectsSubGroup1.Count; i++)
-            //    {
-            //        if (string.IsNullOrEmpty(group.ScheduleFieldsSubjectsSubGroup1[i]) || string.IsNullOrEmpty(group.ScheduleFieldsAudiencesSubGroup1[i])) return false;
-            //    }
-            //    for (int i = 0; i < group.ScheduleFieldsSubjectsSubGroup2.Count; i++)
-            //    {
-            //        if (string.IsNullOrEmpty(group.ScheduleFieldsSubjectsSubGroup2[i]) || string.IsNullOrEmpty(group.ScheduleFieldsAudiencesSubGroup1[i])) return false;
-            //    }
-            //}
+            
             return true;
         }
     }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace Editor
 {
     public partial class FormMain : Form
     {
@@ -16,28 +16,59 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-            TabPage tabPage1 = new TabPage("11");
-            TabPage tabPage2 = new TabPage("21");
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
             for (int i = 0; i < 10; i++)
             {
                 tabControl1.Controls.Add(new TabPage(i + " "));
             }
-            
+            tabControl1.Height = 40;
+            dataGridViewSchedule.RowTemplate.Height = 40;
 
-            var dgv = new DataGridView();
-            dgv.BackgroundColor = Color.Bisque;
-            dgv.Dock = DockStyle.Fill;
-            tabControl1.Controls[0].Controls.Add(dgv);
-            
-            dgv = new DataGridView();
-            dgv.BackgroundColor = Color.MistyRose;
-            tabControl1.Controls[1].Controls.Add(dgv);
+            for (int i = 0; i < 4; i++)
+            {
+                dataGridViewSchedule.Columns.Add(new SpannedDataGridView.DataGridViewTextBoxColumnEx());
+                dataGridViewSchedule.Columns[i].Width = 200;
+            }
+            dataGridViewSchedule.RowCount = 20;
+            listViewSubjects.Columns.Add("Дисциплина");
+            listViewSubjects.Columns.Add("Преподователь");
+            listViewSubjects.Columns.Add("Тип занятия");
+            listViewSubjects.Columns.Add("Кол-во часов");
+            for (int i = 0; i < 4; i++)
+            {
+                listViewSubjects.Columns[i].Width = 140;
+            }
+
+            listViewSubjects.Font = new Font(FontFamily.GenericSansSerif, 12);
+
+            listViewErrors.Columns.Add("Тип ошибки");
+            listViewErrors.Columns.Add("Сведения");
+            listViewErrors.Columns.Add("Еще сведелния");
+            listViewErrors.Columns.Add("Какая-то цифра");
+            for (int i = 0; i < 4; i++)
+            {
+                listViewErrors.Columns[i].Width = 140;
+            }
+            listViewErrors.Font = new Font(FontFamily.GenericSansSerif, 12);
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                ListViewItem lvi = new ListViewItem("qqq");
+                lvi.SubItems.Add("www");
+                lvi.SubItems.Add("eee");
+                lvi.SubItems.Add(i.ToString());
+                listViewSubjects.Items.Add(lvi);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                ListViewItem lvi = new ListViewItem("Error");
+                lvi.SubItems.Add("very");
+                lvi.SubItems.Add("bad");
+                lvi.SubItems.Add(i.ToString());
+                listViewErrors.Items.Add(lvi);
+            }
 
         }
     }

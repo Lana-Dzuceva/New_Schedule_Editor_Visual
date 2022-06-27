@@ -69,8 +69,6 @@
   <ItemGroup>
     <Compile Include="Classes\AddLoads.cs" />
     <Compile Include="Classes\Audience.cs" />
-    <Compile Include="Classes\DataGridViewTextBoxCellEx.cs" />
-    <Compile Include="Classes\ISpannedCell.cs" />
     <Compile Include="Classes\ListTeachers.cs" />
     <Compile Include="Classes\ScheduleError.cs" />
     <Compile Include="Classes\Teacher.cs" />
@@ -83,6 +81,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Row.cs" />
+    <Compile Include="Classes\DataGridViewCellExHelper.cs" />
+    <Compile Include="Classes\DataGridViewHelper.cs" />
+    <Compile Include="Classes\DataGridViewImageCellEx.cs" />
+    <Compile Include="Classes\DataGridViewTextBoxCellEx.cs" />
+    <Compile Include="Classes\ISpannedCell.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +98,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Files\audienceGroup.json" />
     <None Include="Files\B010302-21-1-ПМ_1.plx.xls" />
     <None Include="Files\groups.json" />
